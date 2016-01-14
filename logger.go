@@ -3,7 +3,6 @@
 package echologrus
 
 import (
-	"fmt"
 	"net/http"
 	"time"
 
