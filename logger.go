@@ -30,9 +30,9 @@ func NewWithLogger(l *logrus.Logger) echo.MiddlewareFunc {
 			latency := time.Since(start)
 
 			entry := l.WithFields(logrus.Fields{
-				"request": c.Request().RequestURI,
-				"method":  c.Request().Method,
-				"remote":  c.Request().RemoteAddr,
+				"request":     c.Request().RequestURI,
+				"method":      c.Request().Method,
+				"remote":      c.Request().RemoteAddr,
 				"status":      c.Response().Status(),
 				"text_status": http.StatusText(c.Response().Status()),
 				"took":        latency,
